@@ -10,6 +10,7 @@
 		97C9E3761C027E4F006CB761 /* DHLayoutConstraints.h in Headers */ = {isa = PBXBuildFile; fileRef = 97C9E3751C027E4F006CB761 /* DHLayoutConstraints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97C9E37D1C027E50006CB761 /* DHLayoutConstraints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97C9E3721C027E4F006CB761 /* DHLayoutConstraints.framework */; };
 		97C9E3821C027E50006CB761 /* DHLayoutConstraintsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9E3811C027E50006CB761 /* DHLayoutConstraintsTests.swift */; };
+		97C9E38D1C027E71006CB761 /* DHLayoutConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C9E38C1C027E71006CB761 /* DHLayoutConstraints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		97C9E37C1C027E50006CB761 /* DHLayoutConstraintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DHLayoutConstraintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C9E3811C027E50006CB761 /* DHLayoutConstraintsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DHLayoutConstraintsTests.swift; sourceTree = "<group>"; };
 		97C9E3831C027E50006CB761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97C9E38C1C027E71006CB761 /* DHLayoutConstraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHLayoutConstraints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				97C9E3751C027E4F006CB761 /* DHLayoutConstraints.h */,
+				97C9E38C1C027E71006CB761 /* DHLayoutConstraints.swift */,
 				97C9E3771C027E4F006CB761 /* Info.plist */,
 			);
 			path = DHLayoutConstraints;
@@ -196,6 +199,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97C9E38D1C027E71006CB761 /* DHLayoutConstraints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +314,7 @@
 		97C9E3871C027E50006CB761 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -320,12 +325,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dnthome.DHLayoutConstraints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		97C9E3881C027E50006CB761 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
