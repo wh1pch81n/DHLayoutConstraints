@@ -6,7 +6,7 @@
 //  Copyright © 2015 dnthome. All rights reserved.
 //
 
-typealias DHConstraintTuple = Any
+public typealias DHConstraintTuple = Any
 
 enum DHConstraintRelation: String, StringLiteralConvertible {
 	case EqualTo = "=="
@@ -26,12 +26,12 @@ enum DHConstraintRelation: String, StringLiteralConvertible {
 
 // MARK: - Enable a view for AutoLayout
 prefix operator |~| { }
-prefix func |~|(view: UIView) {
+public prefix func |~|(view: UIView) {
 	view.translatesAutoresizingMaskIntoConstraints = false
 }
 
 postfix operator |~| { }
-postfix func |~|(view: UIView) {
+public postfix func |~|(view: UIView) {
 	view.translatesAutoresizingMaskIntoConstraints = false
 }
 
@@ -79,7 +79,7 @@ func verifyTuple(tuple: [DHConstraintTuple]) -> (relation: DHConstraintRelation,
 
 // MARK: - HORIZONTAL Leading to Superview
 infix operator |-> { associativity left precedence 150 } // 1
-func |->(left: Void, right: [DHConstraintTuple]) -> [NSLayoutConstraint] { // 2
+public func |->(left: Void, right: [DHConstraintTuple]) -> [NSLayoutConstraint] { // 2
 	let tuple = verifyTuple(right)
 	let w = tuple.view.heightOrWidth
 	let r = tuple.relation.rawValue
@@ -90,7 +90,7 @@ func |->(left: Void, right: [DHConstraintTuple]) -> [NSLayoutConstraint] { // 2
 
 // MARK: - HORIZONTAL Trailing to SuperView
 infix operator <-| { associativity right precedence 150 } // 1
-func <-|(left: [DHConstraintTuple], right: Void) -> [NSLayoutConstraint] { // 2
+public func <-|(left: [DHConstraintTuple], right: Void) -> [NSLayoutConstraint] { // 2
 	let tuple = verifyTuple(left)
 	let w = tuple.view.heightOrWidth
 	let r = tuple.relation.rawValue
@@ -101,7 +101,7 @@ func <-|(left: [DHConstraintTuple], right: Void) -> [NSLayoutConstraint] { // 2
 
 // MARK: - VERTICAL Top to Superview
 infix operator |-^ { associativity left precedence 150 } // 1
-func |-^(left: Void, right: [DHConstraintTuple]) -> [NSLayoutConstraint] { // 2
+public func |-^(left: Void, right: [DHConstraintTuple]) -> [NSLayoutConstraint] { // 2
 	let tuple = verifyTuple(right)
 	let h = tuple.view.heightOrWidth
 	let r = tuple.relation.rawValue
@@ -112,7 +112,7 @@ func |-^(left: Void, right: [DHConstraintTuple]) -> [NSLayoutConstraint] { // 2
 
 // MARK: - VERTICAL Bottom to SuperView
 infix operator ^-| { associativity right precedence 150 } // 1
-func ^-|(left: [DHConstraintTuple], right: Void) -> [NSLayoutConstraint] { // 2
+public func ^-|(left: [DHConstraintTuple], right: Void) -> [NSLayoutConstraint] { // 2
 	let tuple = verifyTuple(left)
 	let h = tuple.view.heightOrWidth
 	let r = tuple.relation.rawValue
