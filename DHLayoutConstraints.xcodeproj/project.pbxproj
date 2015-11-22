@@ -326,6 +326,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SYMROOT = build;
 			};
 			name = Debug;
 		};
@@ -343,6 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dnthome.DHLayoutConstraints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SYMROOT = build;
 			};
 			name = Release;
 		};

@@ -1,0 +1,10 @@
+framework module DHLayoutConstraints {
+  umbrella header "DHLayoutConstraints.h"
+
+  export *
+  module * { export * }
+}
+
+module DHLayoutConstraints.Swift {
+    header "DHLayoutConstraints-Swift.h"
+}
